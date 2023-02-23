@@ -20,8 +20,6 @@ const ChatGPT = (props) => {
   let oldChatLog = chatLog.slice(0, -1)
   let newChatLog = chatLog.slice(-1)
 
-  console.log(process.env)
-
   const configuration = new Configuration({
     organization: "org-L2GZ4kXnhDM2W2TwVicIEJHd",
     apiKey: process.env.REACT_APP_OPENAI_API_KEY,
