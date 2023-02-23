@@ -24,7 +24,7 @@ const ChatGPT = (props) => {
 
   const configuration = new Configuration({
     organization: "org-L2GZ4kXnhDM2W2TwVicIEJHd",
-    apiKey: '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',
+    apiKey: process.env.REACT_APP_OPENAI_API_KEY,
   });
   const openai = new OpenAIApi(configuration);
 
