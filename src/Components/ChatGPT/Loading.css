@@ -1,0 +1,16 @@
+.dot{
+    position: absolute;
+    bottom: 2px;
+    right: 16%;
+    font-size: 50px;
+    transform: rotate(180deg);
+    color: rgb(177, 175, 175);
+}
+
+@media screen and (max-width: 700px) {
+    .dot{
+        position: absolute;
+        right: 8%;
+    }
+}
+

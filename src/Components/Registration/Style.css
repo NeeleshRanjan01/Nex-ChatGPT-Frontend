@@ -1,0 +1,407 @@
+.login-reg-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-reg-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border-radius: 20px;
+    border:2px solid black;
+}
+
+.login-container {
+    background-color: #FFFFFF;
+    width: 460px;
+    height: 480px;
+    border-top-left-radius:20px ;
+    border-bottom-left-radius:20px ;  
+}
+
+.reg-container {
+    background-color: #FFFFFF;
+    width: 460px;
+    height: 480px;
+    border-top-right-radius:20px ;
+    border-bottom-right-radius:20px ;
+}
+
+.loginImg{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    /* align-items: end; */
+    /* border: 2px solid wheat; */
+    width: 450px;
+    overflow: hidden;
+    background-color: #adafaf;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.loginImg img{
+    height: 100%;
+}
+
+
+.regImg{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    /* align-items: end; */
+    width: 450px;
+    overflow: hidden;
+    background-color: #adafaf;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.regImg img{
+    height: 100%;
+}
+
+
+.login-heading {
+    margin: 100px 0px 10px 82px;
+    color: black;
+    font-size: 26px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border-bottom: 3px solid black;
+    margin-right: 10px;
+}
+
+
+.login-label {
+    margin: 0px 0px 0px 83px;
+}
+
+.login-input {
+    margin: 6px 0px 17px 83px;
+    border: 1px black solid;
+    width: 304px;
+    height: 36px;
+}
+
+
+.login-submit {
+    border: 1px #E0E0E0 solid;
+    background-color: #FCA738;
+    margin: 17px 0px 10px 83px;
+    width: 189px;
+    height: 40px;
+    font-size: 16px;
+    color: white;
+    border-radius: 20px;
+}
+
+.login-link{
+    margin: 0px 0px 0px 93px;
+}
+
+
+.reg-heading {
+    margin: 60px 0px 10px 82px;
+    color: black;
+    border-bottom: solid 3px black;
+    margin-right: 20px;
+    font-size: 26px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+
+.reg-label {
+    margin: 0px 0px 6px 83px;
+
+}
+
+.reg-input {
+    margin: 6px 0px 17px 83px;
+    border: 1px black solid;
+    width: 304px;
+    height: 36px;
+}
+
+
+.reg-submit {
+    border: 1px #E0E0E0 solid;
+    background-color: #FCA738;
+    margin: 17px 0px 10px 83px;
+    width: 189px;
+    height: 40px;
+    font-size: 16px;
+    color: white;
+    border-radius: 20px;
+}
+
+.reg-link{
+    margin: 0px 0px 0px 93px;
+}
+
+@media screen and (max-width: 920px) {
+    
+    .login-reg-container{ 
+        width: 90%;
+        margin-bottom: 20px;
+    }
+    .login-container {
+        padding-top: 15px;
+        width: 50%;
+        height: 340px;  
+    }
+    
+    .loginImg{
+        width: 50%;
+        height: 340px;
+    }
+    
+    .loginImg img{
+        width: 100%;
+    }
+
+    .reg-container {
+        width: 50%;
+        height: 370px;  
+    }
+    
+    .regImg{
+        width: 50%;
+        height: 370px;
+    }
+    
+    .regImg img{
+        width: 100%;
+    }
+
+    .login-heading {
+        margin: 18px 0px 15px 10px;
+        color: black;
+        padding-left: 5px;
+        border-bottom: solid 3px black;
+        margin-right: 20px;
+        font-size: 26px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+    }
+    
+    
+    .login-label {
+        margin: 0px 0px 6px 12px;
+    }
+    
+    .login-input {
+        margin: 6px 0px 17px 12px;
+        border: 1px black solid;
+        width: 85%;
+        height: 30px;
+        padding-left: 10px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 20px;
+    }
+      
+    .login-submit {
+        border: 1px #E0E0E0 solid;
+        background-color: #FCA738;
+        margin: 10px 0px 10px 10px;
+        width: 159px;
+        height: 35px;
+        font-size: 16px;
+        color: white;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+
+    .login-link{
+        margin: 0px 0px 0px 20px;
+    }
+
+
+    .reg-heading {
+        margin: 18px 0px 15px 10px;
+        color: black;
+        padding-left: 5px;
+        border-bottom: solid 3px black;
+        margin-right: 20px;
+        font-size: 26px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+    }
+    
+    
+    .reg-label {
+        margin: 0px 0px 6px 12px;
+    
+    }
+    
+    .reg-input {
+        margin: 6px 0px 17px 12px;
+        border: 1px black solid;
+        width: 85%;
+        height: 30px;
+        padding-left: 10px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 20px;
+    }
+      
+    .reg-submit {
+        border: 1px #E0E0E0 solid;
+        background-color: #FCA738;
+        margin: 10px 0px 10px 10px;
+        width: 159px;
+        height: 35px;
+        font-size: 16px;
+        color: white;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+
+    .reg-link{
+        margin: 0px 0px 0px 20px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .regImg{
+        display: none;
+    }
+    .loginImg{
+        display: none;
+    }
+
+    .login-reg-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        border-radius: 20px;
+        border:none;
+    }
+
+    .reg-container {
+        margin-top: 10px;
+        border: 3px solid rgb(25, 24, 24);
+        position: fixed;
+        width: 85%;
+        height: 390px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 20px;
+    }
+
+    .reg-heading {
+        margin: 18px 0px 15px 10px;
+        color: black;
+        padding-left: 5px;
+        border-bottom: solid 3px black;
+        margin-right: 20px;
+        font-size: 26px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+    }
+    
+    
+    .reg-label {
+        margin: 0px 0px 6px 12px;
+    
+    }
+    
+    .reg-input {
+        margin: 6px 0px 17px 12px;
+        border: 1px black solid;
+        width: 85%;
+        height: 30px;
+        padding-left: 10px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 20px;
+    }
+      
+    .reg-submit {
+        border: 1px #E0E0E0 solid;
+        background-color: #FCA738;
+        margin: 10px 0px 10px 10px;
+        width: 159px;
+        height: 35px;
+        font-size: 16px;
+        color: white;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+
+    .reg-link{
+        margin: 0px 0px 0px 20px;
+    }
+
+
+    .login-container {
+        margin-top: 30px;
+        border: 3px solid rgb(25, 24, 24);
+        position: fixed;
+        width: 85%;
+        height: 320px;
+        border-top-left-radius: 18px;
+        border-top-right-radius: 18px;
+        /* border-radius: 18px; */
+    }
+
+    .login-heading {
+        margin: 18px 0px 15px 10px;
+        color: black;
+        padding-left: 5px;
+        border-bottom: solid 3px black;
+        margin-right: 20px;
+        font-size: 26px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+    }
+    
+    
+    .login-label {
+        margin: 0px 0px 6px 12px;
+    }
+    
+    .login-input {
+        margin: 6px 0px 17px 12px;
+        border: 1px black solid;
+        width: 85%;
+        height: 30px;
+        padding-left: 10px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 20px;
+    }
+      
+    .login-submit {
+        border: 1px #E0E0E0 solid;
+        background-color: #FCA738;
+        margin: 10px 0px 10px 10px;
+        width: 159px;
+        height: 35px;
+        font-size: 16px;
+        color: white;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+
+    .login-link{
+        margin: 0px 0px 0px 20px;
+    }
+}
