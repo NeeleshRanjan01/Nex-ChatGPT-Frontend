@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 import regImg from "../Pics/reg-img.gif"
+import "./OTP.css"
 import "./Style.css"
 
 const Registration = () => {
@@ -9,27 +10,37 @@ const Registration = () => {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [isLoading, setIsLoading] = useState(false);
+    const [OTPValue, setOTPValue] = useState(null)
+    const [showPopup, setShowPopup] = useState(false);
+    const [OTP, setOTP]=useState()
 
-    let OTP;
-    const handelData = async (e) => {
+    const handleClick = (e) => {
+        setShowPopup(!showPopup);
+      };
+
+    const handelData = async (e) => {  
         e.preventDefault();
         setIsLoading(true);
-        const obj = JSON.stringify({
-            name: name,
-            email: email,
-            password: password,
-        })
 
         await axios.post('https://embarrassed-scarf-fish.cyclic.app/OTP', { email: email }).then((res) => {
-            OTP = res.data.value
+            setOTP(res.data.value)
             setIsLoading(false);
         }).catch((error) => {
             setIsLoading(false);
             console.log(error)
         });
+        setShowPopup(!showPopup)
+    }
 
-        let OTPValue = prompt(`1. Check the mail and enter the OTP \n2. Please don't refresh the page`);
+    const submit=async(e)=>{
+        e.preventDefault();
+        const obj = JSON.stringify({
+            name: name,
+            email: email,
+            password: password,
+        })
         if (parseInt(OTPValue) === parseInt(OTP)) {
+            setShowPopup(!showPopup);
             await axios.post('https://embarrassed-scarf-fish.cyclic.app/reg', obj, { headers: { "Content-Type": "application/json" } }).then((res) => {
                 alert(res.data)
             }).catch((error) => {
@@ -42,10 +53,7 @@ const Registration = () => {
         } else {
             alert("Wrong OTP")
         }
-
-    }
-
-
+      }
 
     return (
         <div>
@@ -78,17 +86,33 @@ const Registration = () => {
 
                             {isLoading && <div><button className='reg-submit'>Please Wait...</button><br /></div>}
                             {!isLoading && (
-                             <div>
-                            <input type="Submit" className='reg-submit' value="Register"></input><br />
-                            </div>
-
+                                <div>
+                                    <input type="Submit" className='reg-submit' value="Register"></input><br />
+                                </div>
                             )}
-
                             <Link to="/login" className='reg-link'>Login to Nex ChatGPT</Link>
                         </form>
                     </div>
                 </div>
             </div>
+
+            {showPopup && (
+                <div className="otp-popup-container">
+                    <div className="otp-popup">
+                        <h2>Enter OTP</h2>
+                        <div>1. Check the mail and enter the OTP</div>
+                        <div>2. Please don't refresh the page</div><br />
+                        <form onSubmit={submit}>
+                            <input type="text" placeholder="OTP" value={OTPValue} onChange={(e) => { setOTPValue(e.target.value) }} required />
+                            <input type="submit" value="Submit" className='otp-button'></input>
+                        </form>
+                        <span className="close2" onClick={handleClick}>
+                            <i className="fas fa-times"></i>
+                        </span>
+                    </div>
+                </div>
+            )}
+
         </div>
     )
 }
