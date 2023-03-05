@@ -16,6 +16,7 @@ const Registration = () => {
 
     const handleClick = (e) => {
         setShowPopup(!showPopup);
+        setOTPValue(null)
       };
 
     const handelData = async (e) => {  
